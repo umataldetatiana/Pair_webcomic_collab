@@ -1,0 +1,102 @@
+/* Define um container de grade para o layout. */
+
+.grid-container {
+    display: grid;
+    /* Define o tipo de display como grid. */
+    grid-template-columns: 412px 223px 231px 148px;
+    grid-template-rows: 293px 327px 264px 318px;
+    /* Alterado a última medida para 318px */
+    grid-gap: 2px;
+    /* Define o espaço entre as células da grade. */
+    padding: 2px;
+    /* Define o preenchimento ao redor do container da grade. */
+    margin: auto;
+    /* Centraliza o container da grade. */
+    width: fit-content;
+    /* Define a largura do container para se ajustar ao conteúdo. */
+}
+
+
+/* Define estilos comuns para todos os blocos. */
+
+.bloco {
+    background-size: cover;
+    /* Faz com que a imagem de fundo cubra todo o bloco. */
+}
+
+
+/* Define estilos para o bloco1. */
+
+.bloco1 {
+    grid-column: 1 / span 1;
+    /* Posiciona o bloco na primeira coluna. */
+    grid-row: 1 / span 1;
+    /* Posiciona o bloco na primeira linha. */
+    background-image: url('../assets/bloco1/Bloco1.png');
+    /* Define a imagem de fundo. */
+}
+
+
+/* Define estilos para o elemento filho do bloco1. */
+
+.bloco1>.bloco-filho {
+    background-image: url('../assets/bloco1/ARVORE_DIREITA_bloco1.png'), url('../assets/bloco1/ARVORE_ESQUERDA_bloco1.png');
+    background-position: center center, top left;
+    background-repeat: no-repeat, no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.bloco1>.bloco-filho img {
+    position: absolute;
+    top: 119px;
+    left: 488px;
+}
+
+
+/* Define estilos para os outros blocos (bloco2, bloco3, etc.). */
+
+
+/* A lógica é semelhante à do bloco1. */
+
+.bloco2 {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.bloco3 {
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.bloco4 {
+    grid-column: 1 / span 4;
+    grid-row: 2 / span 2;
+}
+
+.bloco5 {
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+}
+
+.bloco6 {
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+}
+
+.bloco7 {
+    grid-column: 3 / span 1;
+    grid-row: 4 / span 1;
+}
+
+
+/* Define estilos para o cartão de quadrinhos. */
+
+.comic-card {
+    border: 4px solid black;
+    /* Define a borda do cartão. */
+    padding: 20px;
+    /* Define o preenchimento interno do cartão. */
+    text-align: center;
+    /* Centraliza o texto dentro do cartão. */
+}
